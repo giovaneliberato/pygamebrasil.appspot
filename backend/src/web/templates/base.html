@@ -1,0 +1,46 @@
+{% block head %}
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/css/semantic.min.css">
+    <link rel="stylesheet" href="static/css/home.css">
+    <link rel="stylesheet" href="static/css/downloads.css">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js">
+    </script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/javascript/semantic.min.js">
+    </script>
+</head>
+{% endblock %}
+{% block header %}
+<header>
+    <img class="header-image" src="static/img/pygame_logo.gif">
+    <div class="ui inverted pointing menu">
+        <a class="item" href="home">
+            <i class="home icon"></i> Página Inicial
+        </a>
+        <a class="item" href="downloads">
+            <i class="download disk icon"></i> Downloads
+        </a>
+        <a class="item">
+            <i class="text file outline icon"></i> Documentação
+        </a>
+        <a class="item">
+            <i class="chat icon"></i> Fórum
+        </a>
+        <a class="item">
+            <i class="gamepad icon"></i> Projetos
+        </a>
+    </div>
+</header>
+{% endblock %}
+
+{% block main %}
+        <!-- esse bloco sempre será sobreescrevido   -->
+{% endblock %}
+
+{% block footer %}
+   <footer class="ui inverted segment">
+        <p>2014 Pygame Brasil</p>
+    </footer>
+{% endblock %}

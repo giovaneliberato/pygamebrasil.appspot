@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+{% extends "templates/base.html" %}
+    {% block head %}
+        {{ super() }}
+    {% endblock %}
+    <body>
+        {% block header %}
+            {{ super() }}
+        {% endblock %}
+        {% block main %}
+        <main>
+            <div class="ui stacked segment">
+                <h2>PyGame</h2>
+                <p>PyGame (http://www.pygame.org) é um módulo Python que fornece a API da biblioteca SDL (feita em C) e mais algumas funcionalidades para a programação gráfica, em especial jogos.
+
+                Provê facilidades tais como Sprites, Render Groups, deteção de colisão básica (retângulos) e muito mais.
+
+                É multi plataforma! Funciona em Linux, Windows, Sun, MacOS, BeOS, ...
+
+                </p>
+
+               <a href="http://www.python.org.br/wiki/PyGame" target="_blank">http://www.python.org.br/wiki/PyGame</a>
+            </div>
+            <div class="ui stacked segment">
+                <h2>Pygame no android</h2>
+                <p>
+                    Para quem gosta de programação de jogos para mobile, mais especificadamente para Android existe um módulo
+                    que permite desenvolver jogos para Android com Pygame.
+                </p>
+
+                <a href="http://pygame.renpy.org/" target="_blank">http://pygame.renpy.org/</a>
+            </div>
+            <div class="ui stacked segment">
+                <h2>Módulo surfpickle</h2>
+                <p>
+                    O amigo José Carlos esta disponibilizando o módulo surfpickle:
+                    O surfpickle é um módulo simples, mas ajuda numa tarefa com a qual um bocado de gente parece ter
+                    problemas por aí: conservar Surfaces do pygame.
+                </p>
+                <a href="https://mega.co.nz/#!wQN0WKjL!RVlmMyR15sOkGeuf1sdz8ChcqEVfHm8G7UdgNfc7qfI" target="_blank">https://mega.co.nz/#!wQN0WKjL!RVlmMyR15sOkGeuf1sdz8ChcqEVfHm8G7UdgNfc7qfI</a>
+            </div>
+            <div class="ui stacked segment">
+                <h2>Forum Suspenso</h2>
+                <p>
+                    Tive que suspender as atividades no fórum por falta de pessoas interessadas em da manutenção no mesmo
+                    ainda pretendo reabrir mais preciso de gente interessada
+                    os interessados por favor enviar email para sousa.akira@gmail.com
+                </p>
+            </div>
+            <div class="ui stacked segment">
+                <h2>Recrutamento</h2>
+                <p>  Estamos recrutando pessoas para o projeto PyGame BR: </p>
+                <p>  Estamos precisando de divulgadores, tradutores e moderador (para o forum)</p>
+                <p>  os interessados enviar e-mail para sousa.akira@gmail.com </p>
+                <p>  Conto com a participação de vocês </p>
+                 <p>Atenciosamente </p>
+                 <p>   Alexandre Sousa </p>
+            </div>
+            <div class="ui stacked segment">
+                <h2>Python no seu psp</h2>
+                <div class="metadata">
+                    <span class="date">07/08/2013 - 01:31:38</span>
+                </div>
+                <p>
+                    Estou disponibilizando aqui no site o modulo de Python para o psp para aqueles que deseja desenvolver
+                    games para psp
+                    <a href="http://pygame.com.br/programas/Stackless.tar.gz" target="_blank">http://pygame.com.br/programas/Stackless.tar.gz</a>
+                    Para instalar e simples basta descompacta a pasta em PSP/GAME.
+                    Já vem com um game de exemplo.</p>
+                    <p>link do projeto</p>
+                    <a href="http://code.google.com/p/pspstacklesspython/" target="_blank">http://code.google.com/p/pspstacklesspython/</a>
+                    <p>artigo no viva o linux</p>
+                    <a href="http://www.vivaolinux.com.br/artigo/Python-no-PSP-Ola-Mundo" target="_blank">http://www.vivaolinux.com.br/artigo/Python-no-PSP-Ola-Mundo</a>
+            </div>
+        </main>
+        {% endblock %}
+    </body>
+</html>
+
+
