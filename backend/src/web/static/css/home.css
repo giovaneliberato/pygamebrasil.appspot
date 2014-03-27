@@ -23,3 +23,10 @@ body{
 .ui.vertical.menu{
     margin-left: -125px;
 }
+.ui.teal.submit.button{
+    float: right;
+}
+.ui.two.column.grid{
+    margin-left: 400px;
+    margin-top: 100px;
+}

@@ -3,32 +3,31 @@
 <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/css/semantic.min.css">
+    <link rel="stylesheet" href="static/css/semantic.min.css">
     <link rel="stylesheet" href="static/css/home.css">
     <link rel="stylesheet" href="static/css/downloads.css">
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js">
-    </script>
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/javascript/semantic.min.js">
-    </script>
+    <script type="text/javascript" src="static/js/jquery.js"></script>
+    <script type="text/javascript" src="static/js/semantic.min.js"></script>
+    <script type="text/javascript" src="static/js/script.js"></script>
 </head>
 {% endblock %}
 {% block header %}
 <header>
     <img class="header-image" src="static/img/pygame_logo.gif">
     <div class="ui inverted pointing menu">
-        <a class="item" href="home">
+        <a class="item" href="home" id="home">
             <i class="home icon"></i> Página Inicial
         </a>
-        <a class="item" href="downloads">
+        <a class="item" href="downloads" id="downloads">
             <i class="download disk icon"></i> Downloads
         </a>
-        <a class="item">
+        <a class="item" href="documentacao" id="documentacao">
             <i class="text file outline icon"></i> Documentação
         </a>
-        <a class="item">
+        <a class="item" href="/forum" id="forum">
             <i class="chat icon"></i> Fórum
         </a>
-        <a class="item">
+        <a class="item" href="projetos" id="projetos">
             <i class="gamepad icon"></i> Projetos
         </a>
     </div>
