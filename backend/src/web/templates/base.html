@@ -30,11 +30,18 @@
         <a class="item" href="projetos" id="projetos">
             <i class="gamepad icon"></i> Projetos
         </a>
+        {% if logged_user %}
+            <p class="item">bem vindo {{ logged_user.nome }}</p>
+            <a class="item" style="float: right" href="{{ logout_url }}">Sair</a>
+        {% else %}
+            <a class="item" style="float: right" href="{{ login_url }}">Entrar</a>
+        {% endif %}
     </div>
 </header>
 {% endblock %}
 
 {% block main %}
+
         <!-- esse bloco sempre será sobreescrevido   -->
 {% endblock %}
 

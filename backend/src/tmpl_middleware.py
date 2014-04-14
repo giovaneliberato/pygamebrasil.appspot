@@ -5,9 +5,12 @@ import tmpl
 
 def execute(next_process, handler, dependencies, **kwargs):
     def write_tmpl(template_name, values=None):
-        values = values or {}
-        return handler.response.write(tmpl.render(template_name, values))
 
+        dct = {'logged_user': dependencies.get('logged_user'),
+               'logout_url': dependencies.get('logout_url'),
+               'login_url': dependencies.get('login_url') }
+        dct.update(values or {})
+        return handler.response.write(tmpl.render(template_name, dct))
     dependencies["_write_tmpl"] = write_tmpl
     dependencies["_render"] = tmpl.render
     next_process(dependencies, **kwargs)
