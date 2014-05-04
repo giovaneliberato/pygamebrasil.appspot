@@ -12,5 +12,6 @@ def execute(next_process, handler, dependencies, **kwargs):
         dct.update(values or {})
         return handler.response.write(tmpl.render(template_name, dct))
     dependencies["_write_tmpl"] = write_tmpl
+    dependencies["_write"] = handler.response.write
     dependencies["_render"] = tmpl.render
     next_process(dependencies, **kwargs)

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+{% extends "templates/base.html" %}
+    {% block head %}
+        {{ super() }}
+        <script type="text/javascript" src="static/js/services/usersService.js"></script>
+        <script type="text/javascript" src="static/js/controllers/list_users_controller.js"></script>
+    {% endblock %}
+        {% block header %}
+            {{ super() }}
+        {% endblock %}
+        {% block main %}
+        <main ng-controller="listUsersController">
+            <div class="ui form">
+              <div class="ui four fields">
+                <div class="field">
+                  <input type="text" placeholder="Nome" ng-model="name">
+                </div>
+                <div class="field">
+                  <input type="text" placeholder="Email" ng-model="email">
+                </div>
+                <div class="field">
+                  <input type="text" placeholder="id" ng-model="id">
+                </div>
+                <a class="ui teal button" ng-click="addUser()">Adicionar</a>
+              </div>
+            </div>
+            <table class="ui large table segment">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Google id</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in users | orderBy: user.nome">
+                        <td>{$index + 1}</td>
+                        <td>{user.nome}</td>
+                        <td>{user.email}</td>
+                        <td>{user.google_id}</td>
+                        <td ng-click="removeUser(user, $index)"><i class="remove circle icon"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        {% endblock %}
+    </body>
+</html>
+

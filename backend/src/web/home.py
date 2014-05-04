@@ -9,8 +9,7 @@ def index(_write_tmpl):
     if user:
         logout_url = users.create_logout_url('/')
         dic = {"user": user, "logout_url": logout_url}
-        _write_tmpl('/templates/home.html', dic)
     else:
         login_url = users.create_login_url('/')
         dic = {'login_url': login_url}
-        _write_tmpl('/templates/home.html', dic)
+    _write_tmpl('/templates/home.html', dic)

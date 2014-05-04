@@ -6,5 +6,13 @@ var  setActive = function(){
 
 window.onload = function(){
     setActive();
-}
+};
+
+app = angular.module('pygameApp', ['ngResource']);
+
+app.config(function($interpolateProvider) {
+  $interpolateProvider.startSymbol('{');
+  $interpolateProvider.endSymbol('}');
+});
+
 

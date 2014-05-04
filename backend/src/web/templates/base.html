@@ -8,36 +8,39 @@
     <link rel="stylesheet" href="static/css/downloads.css">
     <script type="text/javascript" src="static/js/jquery.js"></script>
     <script type="text/javascript" src="static/js/semantic.min.js"></script>
+    <script type="text/javascript" src="static/js/angular.min.js"></script>
+    <script type="text/javascript" src="static/js/ng-resource.js"></script>
     <script type="text/javascript" src="static/js/script.js"></script>
 </head>
 {% endblock %}
 {% block header %}
-<header>
-    <img class="header-image" src="static/img/pygame_logo.gif">
-    <div class="ui inverted pointing menu">
-        <a class="item" href="home" id="home">
-            <i class="home icon"></i> Página Inicial
-        </a>
-        <a class="item" href="downloads" id="downloads">
-            <i class="download disk icon"></i> Downloads
-        </a>
-        <a class="item" href="documentacao" id="documentacao">
-            <i class="text file outline icon"></i> Documentação
-        </a>
-        <a class="item" href="/forum" id="forum">
-            <i class="chat icon"></i> Fórum
-        </a>
-        <a class="item" href="projetos" id="projetos">
-            <i class="gamepad icon"></i> Projetos
-        </a>
-        {% if logged_user %}
-            <p class="item">bem vindo {{ logged_user.nome }}</p>
-            <a class="item" style="float: right" href="{{ logout_url }}">Sair</a>
-        {% else %}
-            <a class="item" style="float: right" href="{{ login_url }}">Entrar</a>
-        {% endif %}
-    </div>
-</header>
+<body ng-app="pygameApp">
+    <header>
+        <img class="header-image" src="static/img/pygame_logo.gif">
+        <div class="ui inverted pointing menu">
+            <a class="item" href="home" id="home">
+                <i class="home icon"></i> Página Inicial
+            </a>
+            <a class="item" href="downloads" id="downloads">
+                <i class="download disk icon"></i> Downloads
+            </a>
+            <a class="item" href="documentacao" id="documentacao">
+                <i class="text file outline icon"></i> Documentação
+            </a>
+            <a class="item" href="/forum" id="forum">
+                <i class="chat icon"></i> Fórum
+            </a>
+            <a class="item" href="projetos" id="projetos">
+                <i class="gamepad icon"></i> Projetos
+            </a>
+            {% if logged_user %}
+                <a class="item">bem vindo {{ logged_user.nome }}</a>
+                <a class="item" style="float: right" href="{{ logout_url }}">Sair</a>
+            {% else %}
+                <a class="item" style="float: right" href="{{ login_url }}">Entrar</a>
+            {% endif %}
+        </div>
+    </header>
 {% endblock %}
 
 {% block main %}

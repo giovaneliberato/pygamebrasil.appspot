@@ -30,3 +30,11 @@ body{
     margin-left: 400px;
     margin-top: 100px;
 }
+.remove.circle.icon{
+    color: red;
+    cursor: pointer;
+}
+
+.ui.large.table.segment :hover{
+    background-color: #C2C2D6;
+}
