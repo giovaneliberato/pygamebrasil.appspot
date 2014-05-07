@@ -7,9 +7,9 @@ __author__ = 'iury'
 
 
 def get_all_users(_write):
-        users = Usuario.query().fetch()
-        users = [user.to_dict() for user in users]
-        _write(json.dumps(users))
+    users = Usuario.query().fetch()
+    users = [user.to_dict() for user in users]
+    _write(json.dumps(users))
 
 
 def remove_user(email):
